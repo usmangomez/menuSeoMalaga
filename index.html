@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+
+<body>
+
+    <header id="headerPrueba">
+    </header>
+
+    <nav id="navPrueba">
+    </nav>
+
+    <main id="app">
+        <h1><a href="">General</a> / Manual</h1>
+
+        <!--Empiezo-->
+        <div id="menuArea">
+
+            <nav class="panel">
+                <p class="panel-heading">
+                    Manual
+                </p>
+
+                <div class="panel-block">
+                    <p class="control has-icons-left">
+                        <input class="input" type="text" placeholder="Search" v-model="search">
+                        <span class="icon is-left">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </span>
+                    </p>
+                </div>
+
+                <p class="panel-tabs">
+                    <a href="#" @click="changeMenu('general')" v-bind:class="[items[0] == 'general' ? 'is-active' : '']">General</a>
+                    <a href="#" @click="changeMenu('programmer')" v-bind:class="[items[0] == 'programmer' ? 'is-active' : '']">Programación</a>
+                    <a href="#" @click="changeMenu('marketing')" v-bind:class="[items[0] == 'marketing' ? 'is-active' : '']">Marketing</a>
+                </p>
+
+                <a class="panel-block is-active" v-for="item in filtro">
+                    <span class="panel-icon">
+                      <i class="fas fa-book" aria-hidden="true"></i>
+                    </span>
+                    {{ item.titulo }}
+                </a>
+
+                <label class="panel-block">
+                    <input type="checkbox">
+                    remember me
+                </label>
+            </nav>
+
+        </div>
+        <!--Termino-->
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js" integrity="sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ==" crossorigin="anonymous"></script>
+    <script src="src/vue.js"></script>
+
+</body>
+
+</html>
