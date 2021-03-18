@@ -2,7 +2,7 @@
 
 ### Datos
 
-Los datos se recibirian en en este formato:
+Los datos se recibiran en este formato:
 ```
 data {
 	desc: 'ejemplo',
